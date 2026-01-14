@@ -1,8 +1,8 @@
 :root {
     --primary-color: #0f172a; /* Dark Slate */
     --secondary-color: #334155; /* Slate */
-    --accent-color: #3b82f6; /* Bright Blue */
-    --accent-hover: #2563eb;
+    --accent-color: rgba(0,128,0,1); /* Green */
+    --accent-hover: rgba(0,100,0,1); /* Darker Green */
     --bg-color: #f8fafc;
     --text-main: #334155;
     --text-light: #64748b;
@@ -74,6 +74,10 @@ ul {
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: -1px;
+}
+
+.logo-highlight {
+    color: var(--accent-color);
 }
 
 .nav-links {
