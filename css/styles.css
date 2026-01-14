@@ -628,39 +628,79 @@ ul {
 footer {
     background: var(--primary-color);
     color: var(--white);
-    padding: 4rem 0 0;
+    padding: 5rem 0 0; /* Increased top padding */
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 3rem;
     padding-bottom: 4rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid var(--secondary-color);
 }
 
-.footer-brand h3 {
+.footer-column h3, .footer-column h4 {
     color: var(--white);
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.footer-brand p {
-    color: #94a3b8;
-}
-
-.footer-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-links a {
+.footer-brand-column h3 {
     font-size: 1.5rem;
-    color: #94a3b8;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
-.footer-links a:hover {
+.footer-brand-column p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.footer-sitemap-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-sitemap-column li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-sitemap-column a {
+    color: #94a3b8;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-sitemap-column a:hover {
     color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-social-links a {
+    color: #94a3b8;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.footer-social-links a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-social-links i {
+    font-size: 1.2rem;
+    width: 20px; /* Align text */
+    text-align: center;
 }
 
 .footer-bottom {
@@ -881,7 +921,7 @@ footer {
     
     /* Mobile Navigation */
     .burger {
-        display: block;
+        display: none;
     }
 
     .nav-links {
@@ -916,7 +956,7 @@ footer {
         }
         to {
             opacity: 1;
-            transform: translateX(0px);
+            transform: translateY(0);
         }
     }
 
@@ -933,9 +973,16 @@ footer {
     }
     
     .footer-content {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stack columns on mobile */
         text-align: center;
-        gap: 2rem;
+    }
+
+    .footer-column {
+        margin-bottom: 2rem;
+    }
+
+    .footer-social-links {
+        align-items: center; /* Center social links on mobile */
     }
 
     .timeline::after {
