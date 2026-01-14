@@ -41,4 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = mailtoLink;
         });
     }
+
+    // Tab Functionality
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabLinks.length > 0) {
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                tabLinks.forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                link.classList.add('active');
+
+                // Hide all tab contents
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                    content.classList.remove('active');
+                });
+
+                // Show target tab content
+                const targetId = link.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.style.display = 'block';
+                    // Small delay to allow display:block to apply before adding opacity class for fade
+                    setTimeout(() => {
+                        targetContent.classList.add('active');
+                    }, 10);
+                }
+            });
+        });
+    }
 });
