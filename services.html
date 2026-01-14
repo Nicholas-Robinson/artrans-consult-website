@@ -12,26 +12,7 @@
     <script src="js/guard.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html"><span class="logo-highlight">ART</span>rans Consult.</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="services.html" class="active">Expertise</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </nav>
+    <site-header></site-header>
 
     <header class="page-hero">
         <div class="container">
@@ -115,23 +96,10 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h3>ARTrans Consult</h3>
-                <p>Engineering Excellence</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/alan-robinson-1b993722/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 ARTrans Consult. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <site-footer></site-footer>
 
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
