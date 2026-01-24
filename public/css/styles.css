@@ -1,17 +1,19 @@
 :root {
     --primary-color: #0f172a; /* Dark Slate */
     --secondary-color: #334155; /* Slate */
-    --accent-color: rgba(0,128,0,1); /* Green */
-    --accent-hover: rgba(0,100,0,1); /* Darker Green */
+    --accent-color: rgba(0, 128, 0, 1); /* Green */
+    --accent-hover: rgba(0, 100, 0, 1); /* Darker Green */
     --bg-color: #f8fafc;
     --text-main: #334155;
     --text-light: #64748b;
     --white: #ffffff;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-md:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Open Sans", sans-serif;
     --transition: all 0.3s ease;
 }
 
@@ -29,7 +31,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     color: var(--primary-color);
     font-weight: 700;
@@ -95,7 +100,7 @@ ul {
 }
 
 .nav-links a::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 2px;
@@ -105,11 +110,13 @@ ul {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent-color);
 }
 
-.nav-links a:hover::after, .nav-links a.active::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
 }
 
@@ -130,12 +137,16 @@ ul {
 /* Hero Section */
 .hero {
     background-color: var(--primary-color);
-    background-image: 
+    background-image:
         linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
-        linear-gradient(#e2e8f0 1px, transparent 1px), 
+        linear-gradient(#e2e8f0 1px, transparent 1px),
         linear-gradient(90deg, #e2e8f0 1px, transparent 1px),
-        url('../images/traffic-modelling.png');
-    background-size: cover, 40px 40px, 40px 40px, cover;
+        url("../images/traffic-modelling.png");
+    background-size:
+        cover,
+        40px 40px,
+        40px 40px,
+        cover;
     background-position: center;
     padding: 8rem 0 6rem;
     text-align: center;
@@ -143,7 +154,7 @@ ul {
 }
 
 .hero::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -199,52 +210,7 @@ ul {
 }
 
 /* Inner Page Hero */
-.page-hero {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 6rem 0 4rem;
-    text-align: center;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-}
 
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(15, 23, 42, 0.7); /* Dark overlay */
-    z-index: 1;
-}
-
-.page-hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-.page-hero.hero-profile {
-    background-image: url('../images/traffic-a.png');
-}
-
-.page-hero.hero-projects {
-    background-image: url('../images/traffic-modelling.png');
-}
-
-.page-hero h1 {
-    color: var(--white);
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.page-hero p {
-    color: #cbd5e1;
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-}
 
 /* Buttons */
 .btn {
@@ -385,7 +351,7 @@ ul {
 }
 
 .about-visual::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -20px;
     right: -20px;
@@ -419,7 +385,7 @@ ul {
 
 /* The vertical line */
 .timeline::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 2px;
     background-color: #e2e8f0;
@@ -440,7 +406,7 @@ ul {
 
 /* The Node/Dot on the timeline */
 .timeline-item::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 16px;
     height: 16px;
@@ -490,7 +456,7 @@ ul {
 
 /* The Horizontal "Lead Line" */
 .timeline-content::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -515,7 +481,6 @@ ul {
     margin-bottom: 0.5rem;
     display: block;
 }
-
 
 /* Services List (Services Page) */
 .services-section {
@@ -633,13 +598,17 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Responsive grid */
     gap: 3rem;
     padding-bottom: 4rem;
     border-bottom: 1px solid var(--secondary-color);
 }
 
-.footer-column h3, .footer-column h4 {
+.footer-column h3,
+.footer-column h4 {
     color: var(--white);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
@@ -910,7 +879,7 @@ footer {
     .hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .about-grid {
         grid-template-columns: 1fr;
     }
@@ -918,7 +887,7 @@ footer {
     .about-visual {
         margin-top: 2rem;
     }
-    
+
     /* Mobile Navigation */
     .burger {
         display: none;
@@ -936,7 +905,7 @@ footer {
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
         padding-top: 2rem;
     }
 
@@ -971,7 +940,7 @@ footer {
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr; /* Stack columns on mobile */
         text-align: center;
@@ -988,29 +957,32 @@ footer {
     .timeline::after {
         left: 20px;
     }
-      
+
     .timeline-item {
         width: 100%;
         padding-left: 50px;
         padding-right: 15px;
     }
-      
-    .left, .right {
+
+    .left,
+    .right {
         left: 0;
         justify-content: flex-start;
     }
-    
+
     /* Mobile Dot Positioning */
-    .left::after, .right::after {
+    .left::after,
+    .right::after {
         left: 12px; /* 20px (line pos) - 8px (half dot width) = 12px */
         right: auto;
     }
-      
-    .left .timeline-content::before, .right .timeline-content::before {
+
+    .left .timeline-content::before,
+    .right .timeline-content::before {
         left: -20px;
         right: auto;
     }
-      
+
     .contact-wrapper {
         grid-template-columns: 1fr;
     }

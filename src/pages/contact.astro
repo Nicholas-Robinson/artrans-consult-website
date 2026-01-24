@@ -1,58 +1,81 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PageSubtitle from "../components/shared/PageSubtitle.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactPageHero from "../components/page-heros/ContactPageHero.astro";
+import PageTitle from "../components/shared/PageTitle.astro";
 ---
+
 <BaseLayout>
-  <header class="page-hero">
-    <div class="container">
-      <h1>Get in Touch</h1>
-      <p>Ready to discuss your next engineering challenge? Let's connect.</p>
-    </div>
-  </header>
+    <ContactPageHero>
+        <PageTitle>Get in Touch</PageTitle>
+        <PageSubtitle>Ready to discuss your next engineering challenge? Let's connect.</PageSubtitle>
+    </ContactPageHero>
 
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p style="margin-bottom: 2rem; color: var(--text-light);">ARTrans Consult is currently available for opportunities in the UK. Please feel free to reach out via email or LinkedIn to discuss how we can assist your organization.</p>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">
+                        ARTrans Consult is currently available for opportunities
+                        in the UK. Please feel free to reach out via email or
+                        LinkedIn to discuss how we can assist your organization.
+                    </p>
 
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <span>email@example.com</span>
-          </div>
-          <div class="info-item">
-            <i class="fab fa-linkedin"></i>
-            <span><a href="https://www.linkedin.com/in/alan-robinson-1b993722/" target="_blank">Connect on LinkedIn</a></span>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>United Kingdom</span>
-          </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>email@example.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span
+                            ><a
+                                href="https://www.linkedin.com/in/alan-robinson-1b993722/"
+                                target="_blank">Connect on LinkedIn</a
+                            ></span
+                        >
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>United Kingdom</span>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            >Send Message</button
+                        >
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="contact-form">
-          <form class="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </BaseLayout>
-

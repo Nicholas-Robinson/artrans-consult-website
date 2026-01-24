@@ -1,87 +1,115 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PageSubtitle from "../components/shared/PageSubtitle.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServicesPageHero from "../components/page-heros/ServicesPageHero.astro";
+import PageTitle from "../components/shared/PageTitle.astro";
 ---
+
 <BaseLayout>
-  <header class="page-hero">
-    <div class="container">
-      <h1>Areas of Expertise</h1>
-      <p>Delivering specialized knowledge and strategic value across the engineering lifecycle.</p>
-    </div>
-  </header>
+    <ServicesPageHero>
+        <PageTitle>Areas of Expertise</PageTitle>
+        <PageSubtitle>
+            Delivering specialized knowledge and strategic value across the
+            engineering lifecycle.
+        </PageSubtitle>
+    </ServicesPageHero>
 
-  <section class="services-section">
-    <div class="container">
-      <div class="service-item">
-        <div class="service-icon">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <div class="service-details">
-          <h3>Process Optimization & Efficiency</h3>
-          <p>We analyze existing workflows to identify bottlenecks and inefficiencies. By implementing lean methodologies and data-driven strategies, we help organizations reduce costs and improve output quality.</p>
-          <ul>
-            <li>Workflow Analysis & Redesign</li>
-            <li>Lean Manufacturing Implementation</li>
-            <li>Resource Allocation Strategy</li>
-          </ul>
-        </div>
-      </div>
+    <section class="services-section">
+        <div class="container">
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="service-details">
+                    <h3>Process Optimization & Efficiency</h3>
+                    <p>
+                        We analyze existing workflows to identify bottlenecks
+                        and inefficiencies. By implementing lean methodologies
+                        and data-driven strategies, we help organizations reduce
+                        costs and improve output quality.
+                    </p>
+                    <ul>
+                        <li>Workflow Analysis & Redesign</li>
+                        <li>Lean Manufacturing Implementation</li>
+                        <li>Resource Allocation Strategy</li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="service-item">
-        <div class="service-icon">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <div class="service-details">
-          <h3>Project Management & Leadership</h3>
-          <p>Providing seasoned leadership for complex engineering projects. From initial feasibility studies to final delivery, we ensure projects stay on track, within budget, and meet all technical specifications.</p>
-          <ul>
-            <li>End-to-End Project Lifecycle Management</li>
-            <li>Risk Assessment & Mitigation</li>
-            <li>Stakeholder Management</li>
-          </ul>
-        </div>
-      </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="service-details">
+                    <h3>Project Management & Leadership</h3>
+                    <p>
+                        Providing seasoned leadership for complex engineering
+                        projects. From initial feasibility studies to final
+                        delivery, we ensure projects stay on track, within
+                        budget, and meet all technical specifications.
+                    </p>
+                    <ul>
+                        <li>End-to-End Project Lifecycle Management</li>
+                        <li>Risk Assessment & Mitigation</li>
+                        <li>Stakeholder Management</li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="service-item">
-        <div class="service-icon">
-          <i class="fas fa-chart-line"></i>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="service-details">
+                    <h3>Strategic Engineering Consulting</h3>
+                    <p>
+                        Helping businesses align their technical capabilities
+                        with long-term strategic goals. We provide actionable
+                        insights that drive innovation and competitive advantage
+                        in the market.
+                    </p>
+                    <ul>
+                        <li>Technical Feasibility Studies</li>
+                        <li>Innovation Strategy</li>
+                        <li>Regulatory Compliance & Standards</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="service-details">
-          <h3>Strategic Engineering Consulting</h3>
-          <p>Helping businesses align their technical capabilities with long-term strategic goals. We provide actionable insights that drive innovation and competitive advantage in the market.</p>
-          <ul>
-            <li>Technical Feasibility Studies</li>
-            <li>Innovation Strategy</li>
-            <li>Regulatory Compliance & Standards</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="features" style="background-color: var(--bg-color);">
-    <div class="container">
-      <div class="section-header">
-        <h2>Why Choose ARTrans?</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <i class="fas fa-check-circle"></i>
-          <h3>Proven Track Record</h3>
-          <p>A history of successful project deliveries and satisfied clients across multiple sectors.</p>
+    <section class="features" style="background-color: var(--bg-color);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose ARTrans?</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Proven Track Record</h3>
+                    <p>
+                        A history of successful project deliveries and satisfied
+                        clients across multiple sectors.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>Global Perspective</h3>
+                    <p>
+                        International experience brought to the local UK market,
+                        offering diverse insights.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Collaborative Approach</h3>
+                    <p>
+                        Working closely with your internal teams to ensure
+                        sustainable, long-term success.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="feature-card">
-          <i class="fas fa-globe-europe"></i>
-          <h3>Global Perspective</h3>
-          <p>International experience brought to the local UK market, offering diverse insights.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-handshake"></i>
-          <h3>Collaborative Approach</h3>
-          <p>Working closely with your internal teams to ensure sustainable, long-term success.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </BaseLayout>
-
